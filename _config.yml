@@ -26,7 +26,7 @@ github:
 description: Engineering Portfolio and Blog of Langston C. Johnson
   # This description will show up in your feed, and in the meta description tag
   # of your site's pages. It will also show up in search results.
-baseurl: "/langisjo" # the subpath of your site, e.g. /blog
+baseurl: "/langisblog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:categories/:year/:month/:day/:title:output_ext
 #twitter_username: jekyllrb
