@@ -1,15 +1,23 @@
----
-title: "Default Title"
----
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-    </head>
-    <body>
-        {{ content }}
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.title}} | {{page.title}}  </title>
+    <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
+  </head>
+
+  <header>
+  </header>
+
+  <body>
+    {{ content }}
+    <br>
+    <footer>
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <p>
+        <a href="{{"/about" | relative_url }}">About</a> |
+        <a href="{{"/contact" | relative_url }}">Contact</a>
+      </p>
+    </footer>
+  </body>
 </html>
