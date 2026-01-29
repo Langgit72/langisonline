@@ -17,70 +17,7 @@ code {
 pre {
   padding: .5rem;
   line-height: 1.25;
-  overflow-x: scroll;
 }
-
-/*
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-*/
 
 a,
 a:visited {
@@ -97,26 +34,6 @@ html {
   font-size: 12px;
 }
 
-@media screen and (min-width: 32rem) and (max-width: 48rem) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  html {
-    font-size: 16px;
-  }
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  /*min-height: 100dvh;*/ /* Use 100vh as a fallback for older browsers */
-  line-height: 1.85;
-
-}
-
 header{
   margin-bottom: 10%;
   padding: 1rem;
@@ -126,13 +43,10 @@ header{
   background-color: var(--Metallic-Blackout);
 }
 
-main {
-  /*flex-grow: 1;*/ /* This makes the main content take up all available space */
-}
-
 footer {
   margin-top: 10%;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 3px solid var(--Crimson-Red);
   text-align: center;
   background-color: var(--Metallic-Blackout);
@@ -197,14 +111,47 @@ small,
 
 /* https://github.com/mrmrs/fluidity */
 
+.site-nav{
+  text-decoration: none;
+}
+
+.home-nav{
+  text-decoration: none;
+}
+
+.header-card{
+  padding: 0rem .25rem;
+  border-radius: .5rem;
+  background-color: var(--Metallic-Black);
+}
+
+.header-card a{
+  color: var(--Silver-Accent);
+}
+.header-card a.home-nav{
+  color: var(--Crimson-Red);
+}
+
+
+.project-card{
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  background-color: var(--Metallic-Blackout);
+}
+.project-card a{
+  color: var(--Crimson-Red-Dark);
+}
+
 .profile-picture {
     /* Sizing and Responsiveness */
+    width: 500px;
     max-width: 100%; /* Prevents image from exceeding container width */
-    height: 500px;    /* Maintains aspect ratio */
-    width: 500px;    /* Sets a base width */
+    aspect-ratio: 1/1;
+    height: auto;
+    object-fit: cover;
 
     /* Appearance */
-    border: 1px solid var(--Crimson-Red);
+    border: 3px solid var(--Crimson-Red);
     border-radius: 50%; /* Rounded corners */
     padding: 5px;
 
@@ -216,11 +163,36 @@ small,
 
 .flex-container {
     display: flex;
-    flex-flow: row nowrap; /* Allows items to wrap to the next line */
+    flex-flow: row nowrap; 
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 20px; /* Space between items */
 }
+
+.flex-container-select-projects {
+    display: flex;
+    flex-flow: row rap; /* Allows items to wrap to the next line */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem; /* Space between items */
+}
+
+.flex-container-header {
+    display: flex;
+    flex-flow: row nowrap; /* Allows items to wrap to the next line */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem; /* Space between items */
+}
+
+.flex-container-footer {
+    display: flex;
+    flex-flow: row nowrap; /* Allows items to wrap to the next line */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem; /* Space between items */
+}
+
 
 img,
 canvas,
@@ -233,11 +205,14 @@ textarea {
 }
 
 html,
+
+header { margin-bottom: 4rem; }
+main   { margin: 0 auto; }
+footer { margin-top: 4rem; }
 body {
   color: var(--Silver-Accent);
   font-family: "Courier New";
   line-height: 1.45;
-  margin: 6rem auto 1rem;
   padding: .48rem;
   background-color: var(--Metallic-Black);
   min-height: 100%;
@@ -248,13 +223,6 @@ html {
   font-size: 18px;
 }
 
-.textbox {
-  width: 200px;
-}
-
-pre {
-  background-color: var(--Metallic-Black);
-}
 
 blockquote {
   border-left: 3px solid var(--Crimson-Red);

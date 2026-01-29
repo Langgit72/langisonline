@@ -1,23 +1,48 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{site.title}} | {{page.title}}  </title>
+    <title>{{site.title}} | {{page.title}}</title>
     <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
+     <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/Images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/Images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/Images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/Images/favicon/site.webmanifest" />
   </head>
 
-  <header>
-  </header>
-
   <body>
+    <header>
+    <div class ="flex-container-header">
+        <div class ="header-card">
+          <a href="https://example.com" class ="home-nav"><h3>Home</h3></a>
+        </div>
+
+        <div class ="header-card">
+          <a href="https://example.com" class ="site-nav"><h3>About</h3></a>
+        </div>
+    </div>
+    </header>
+
     {{ content }}
-    <br>
+
     <footer>
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-      <p>
-        <a href="{{"/about" | relative_url }}">About</a> |
-        <a href="{{"/contact" | relative_url }}">Contact</a>
-      </p>
+      <div class ="flex-container-footer">
+          <div>
+            <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+            <p>
+              <a href="{{"/about" | relative_url }}">About</a> |
+              <a href="{{"/contact" | relative_url }}">Contact</a>
+            </p>
+          </div>
+          <img src="{{'assets/Images/Cornell/cornell_seal_simple_web_carnelian.png' | relative_url }}" width="160px" height="160px">
+          <img src="{{'assets/Images/SSDS/SSDS_logo.jpg' | relative_url }}" width="160px" height="100px">
+      </div>
     </footer>
+
   </body>
 </html>
