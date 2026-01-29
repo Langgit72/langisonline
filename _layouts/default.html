@@ -17,21 +17,31 @@
 
   <body>
     <header>
-    <div class ="flex-container-header">
-        <div class ="header-card">
-          <a href="https://example.com" class ="home-nav"><h3>Home</h3></a>
-        </div>
-
-        <div class ="header-card">
-          <a href="https://example.com" class ="site-nav"><h3>About</h3></a>
-        </div>
-    </div>
+      <div class ="flex-container-space-between">
+        <img src="{{'assets/images/favicon/favicon-96x96.png' | relative_url}}" alt = "favicon">
+        <div class ="flex-container-row_nowrap">
+          <div class ="header-card">
+            <a href="{{"/index" | relative_url}}" class ="home-nav"><h3>Home</h3></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/about" | relative_url}}" class ="site-nav"><h3>Download My Resume</h3></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/about" | relative_url}}" class ="site-nav"><h3>About</h3></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/projects" | relative_url}}" class ="site-nav"><h3>Projects</h3></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/posts" | relative_url}}" class ="site-nav"><h3>Posts</h3></a>
+          </div>
+      </div>
     </header>
-
+ 
     {{ content }}
 
     <footer>
-      <div class ="flex-container-footer">
+      <div class ="flex-container-space-between">
           <div>
             <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
             <p>
@@ -39,8 +49,10 @@
               <a href="{{"/contact" | relative_url }}">Contact</a>
             </p>
           </div>
-          <img src="{{'assets/images/Cornell/cornell_seal_simple_web_carnelian.png' | relative_url }}" width="160px" height="160px">
-          <img src="{{'assets/images/SSDS/SSDS_logo.jpg' | relative_url }}" width="160px" height="100px">
+          <div class = 'flex-container-row_nowrap'>
+            <img src="{{'assets/images/Cornell/cornell_seal_simple_web_carnelian.png' | relative_url }}" width="160px" height="160px">
+            <img src="{{'assets/images/SSDS/SSDS_logo.jpg' | relative_url }}" width="160px" height="100px">
+          </div>
       </div>
     </footer>
 
