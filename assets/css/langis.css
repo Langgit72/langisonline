@@ -123,6 +123,8 @@ small,
   padding: 0rem .25rem;
   border-radius: .5rem;
   background-color: var(--Metallic-Black);
+  min-width:8rem;
+  flex-shrink: 0
 }
 
 .header-card a{
@@ -143,9 +145,8 @@ small,
 }
 
 .project-type-header{
-  color: var(--Crimson-Red);
+  color: var(--Silver-Accent);
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: .5rem;
 }
 
@@ -196,6 +197,7 @@ small,
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  padding: 0%;
 }
 
 .flex-container-column {
@@ -206,7 +208,6 @@ small,
     text-align: left;
     gap: 1rem; /* Space between items */
 }
-
 
 img,
 canvas,
@@ -230,7 +231,7 @@ body {
   padding: .48rem;
   background-color: var(--Metallic-Black);
   min-height: 100%;
-  max-width: 100%;
+  min-width: 70rem;
 }
 
 html {

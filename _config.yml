@@ -50,15 +50,15 @@ projects:
     name: "Software Engineering"
     description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
     items:
-    project1:
-        name: "High Altitude Balloon Flight Software"
-        description: "Embedded Software for a High Altitude Balloon Payload"
-        link: "{{'_projects/project_hab_software.html'|relative_url}}"
-    project2:
-        name: "Free Drift"
-        description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
-        link: "{{'_projects/project_free_drift.html'|relative_url}}"
-      
+      project1:
+          name: "High Altitude Balloon Flight Software"
+          description: "Embedded Software for a High Altitude Balloon Payload"
+          link: "{{'_projects/project_hab_software.html'|relative_url}}"
+      project2:
+          name: "Free Drift"
+          description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
+          link: "{{'_projects/project_free_drift.html'|relative_url}}"
+        
 #favicon:
  # source: favicon.svg
 # Build settings

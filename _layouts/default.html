@@ -8,34 +8,34 @@
     <title>{{site.title}} | {{page.title}}</title>
     <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
      <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/Images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/Images/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/Images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/Images/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/Images/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
   </head>
 
   <body>
     <header>
       <div class ="flex-container-space-between">
-        <img src="{{'assets/Images/favicon/favicon-96x96.png' | relative_url}}" alt = "favicon">
+        <div>
+          <img src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon" width = 60% height = 60%>
+          <p>totem</p>
+        </div>
+
         <div class ="flex-container-row_nowrap">
           <div class ="header-card">
-            <a href="{{"/index" | relative_url}}" class ="home-nav"><h3>Home</h3></a>
+            <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
           </div>
           <div class ="header-card">
-            <a href="{{"assets/pdfs/Langston_Johnson_Resume_2026.pdf" | relative_url}}" download="Langston_Johnson_Resume_2026" class ="site-nav"><h3>Download My Resume</h3></a>
+            <a href="{{"assets/pdfs/Langston_Johnson_Resume_2026.pdf" | relative_url}}" download="Langston_Johnson_Resume_2026" class ="site-nav"><h4>Download My Resume</h4></a>
           </div>
           <div class ="header-card">
-            <a href="{{"/about" | relative_url}}" class ="site-nav"><h3>About</h3></a>
+            <a href="{{"/about" | relative_url}}" class ="site-nav"><h4>About</h4></a>
           </div>
           <div class ="header-card">
-            <a href="{{"/projects" | relative_url}}" class ="site-nav"><h3>Projects</h3></a>
+            <a href="{{"/projects" | relative_url}}" class ="site-nav"><h4>Projects</h4></a>
           </div>
-          <div class ="header-card">
-            <a href="{{"/posts" | relative_url}}" class ="site-nav"><h3>Posts</h3></a>
-          </div>
-      </div>
+        </div>
     </header>
  
     {{ content }}
@@ -49,9 +49,12 @@
               <a href="{{"/contact" | relative_url }}">Contact</a>
             </p>
           </div>
-          <div class = 'flex-container-row_nowrap'>
-            <img src="{{'assets/Images/Cornell/cornell_seal_simple_web_carnelian.png' | relative_url }}" width="160px" height="160px">
-            <img src="{{'assets/Images/SSDS/SSDS_logo.jpg' | relative_url }}" width="160px" height="100px">
+          <div class = "flex-container-row_nowrap">
+            <img src = "{{'assets/Images/GitHub/GitHub_Invertocat_White_Clearspace.png' | relative_url}}" alt = "My Github" width="100px" height="100px">
+            </a>
+            <a href="{{site.linkedin}}" target="_blank">
+              <img src = "{{'assets/Images/LinkedIn/InBug-White.png' | relative_url}}" alt = "My LinkedIn" width="100px",height="=100px">
+            </a>
           </div>
       </div>
     </footer>
