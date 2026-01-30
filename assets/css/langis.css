@@ -132,14 +132,21 @@ small,
   color: var(--Crimson-Red);
 }
 
-
 .project-card{
   padding: .75rem 1rem;
+  width: 500px;
   border-radius: .5rem;
   background-color: var(--Metallic-Blackout);
 }
 .project-card a{
   color: var(--Crimson-Red-Dark);
+}
+
+.project-type-header{
+  color: var(--Crimson-Red);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
 }
 
 .profile-picture {
@@ -191,6 +198,14 @@ small,
   justify-content: space-between;
 }
 
+.flex-container-column {
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 1rem; /* Space between items */
+}
 
 
 img,

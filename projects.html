@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1>Projects</h1>
+<div class = "flex-container-column">
+    {% for project_type in site.projects%}
+       <div class="project-type-header">
+            <h2 text> {{project_type[1].name}} </h2>
+            <h4> {{project_type[1].description}} </h4>
+            <hr>
+        </div>
+        {% for project in project_type[1].items %}
+        <div class="project-card">
+            <a href="{{ project.link }}">
+            <h4>{{ project[1].name }}</h4>
+            </a>
+            <p>{{ project[1].description }}</p>
+        </div>
+        {% endfor %}
+    {% endfor %}
+</div>
