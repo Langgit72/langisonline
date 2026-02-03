@@ -18,10 +18,9 @@
     <header>
       <div class ="flex-container-space-between">
         <div>
-          <img src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon" width = 60% height = 60%>
-          <p>totem</p>
+          <img class = 'favicon-header' src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon">
+          <!--<p>totem</p>-->
         </div>
-
         <div class ="flex-container-row_nowrap">
           <div class ="header-card">
             <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
@@ -36,28 +35,29 @@
             <a href="{{"/projects" | relative_url}}" class ="site-nav"><h4>Projects</h4></a>
           </div>
         </div>
+      </div>
     </header>
- 
-    {{ content }}
-
+    <main>
+      {{ content }}
+    </main>
     <footer>
       <div class ="flex-container-space-between">
-          <div>
-            <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-            <p>
-              <a href="{{"/about" | relative_url }}">About</a> |
-              <a href="{{"/contact" | relative_url }}">Contact</a>
-            </p>
-          </div>
-          <div class = "flex-container-row_nowrap">
-            <img src = "{{'assets/Images/GitHub/GitHub_Invertocat_White_Clearspace.png' | relative_url}}" alt = "My Github" width="100px" height="100px">
+        <div>
+          <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+          <p>
+            <a href="{{"/about" | relative_url }}">About</a> |
+            <a href="{{"/contact" | relative_url }}">Contact</a>
+          </p>
+        </div>
+        <div class = "flex-container-row_nowrap">
+            <a href="{{site.github}}" target="_blank">
+              <img class = "icon-link" src = "{{'assets/Images/GitHub/GitHub_Invertocat_White_Clearspace.png' | relative_url}}" alt = "My Github">
             </a>
             <a href="{{site.linkedin}}" target="_blank">
-              <img src = "{{'assets/Images/LinkedIn/InBug-White.png' | relative_url}}" alt = "My LinkedIn" width="100px",height="=100px">
+              <img class = "icon-link" src = "{{'assets/Images/LinkedIn/InBug-White.png' | relative_url}}" alt = "My LinkedIn">
             </a>
-          </div>
+        </div>
       </div>
     </footer>
-
   </body>
 </html>

@@ -21,9 +21,8 @@ pre {
 
 a,
 a:visited {
-  color: var(--Crimson-Red-Dark);
+  color: var(--Crimson-Red);
 }
-
 a:hover,
 a:focus,
 a:active {
@@ -31,17 +30,26 @@ a:active {
 }
 
 html {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 header{
-  margin-bottom: 10%;
-  padding: 1rem;
-  border-top: 3px solid var(--Metallic-Blackout);
-  border-bottom: 3px solid var(--Crimson-Red);
-  text-align: center;
+  margin-bottom: 5%;
+  border-bottom: var(--Crimson-Red) double 10px;
   background-color: var(--Metallic-Blackout);
 }
+
+body {
+  color: var(--Silver-Accent);
+  font-family: "Courier New";
+  line-height: 1.45;
+  padding: .48rem;
+  background-color: var(--Metallic-Black);
+  /* min-height: 100%; */
+  min-width: 70rem;
+  margin: 0;
+}
+
 
 footer {
   margin-top: 10%;
@@ -59,7 +67,6 @@ p,
   min-width: 20ch;
    max-width: 60ch;
 }
-
 h1,
 .retro-h1,
 h2,
@@ -72,59 +79,56 @@ h4,
   font-weight: inherit;
   line-height: 1.42;
 }
-
 h1,
 .retro-h1 {
   margin-top: 0;
   font-size: 3.998rem;
 }
-
 h2,
 .retro-h2 {
   font-size: 2.827rem;
 }
-
 h3,
 .retro-h3 {
   font-size: 1.999rem;
 }
-
 h4,
 .retro-h4 {
   font-size: 1.414rem;
 }
-
 h5,
 .retro-h5 {
   font-size: 1.121rem;
 }
-
 h6,
 .retro-h6 {
   font-size: .88rem;
 }
-
 small,
 .retro-small {
   font-size: .707em;
 }
 
-/* https://github.com/mrmrs/fluidity */
+.favicon-header{
+  fill: black;
+  object-fit: contain;
+  margin:0;
+  width: 60%;
+}
 
 .site-nav{
   text-decoration: none;
 }
-
 .home-nav{
   text-decoration: none;
 }
 
 .header-card{
-  padding: 0rem .25rem;
+  text-align: center;
   border-radius: .5rem;
   background-color: var(--Metallic-Black);
   min-width:8rem;
-  flex-shrink: 0
+  margin:0
 }
 
 .header-card a{
@@ -165,8 +169,13 @@ small,
 
     /* Centering */
     display: block;
-    float: left;
     margin-right: 10px;
+}
+
+.icon-link{
+  fill: var(--Crimson-Red);
+  height: 100px;
+
 }
 
 .flex-container {
@@ -179,7 +188,7 @@ small,
 
 .flex-container-select-projects {
     display: flex;
-    flex-flow: row rap; /* Allows items to wrap to the next line */
+    flex-flow: row wrap; /* Allows items to wrap to the next line */
     justify-content: center;
     align-items: center;
     gap: 1rem; /* Space between items */
@@ -197,7 +206,8 @@ small,
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 0%;
+  align-items: center;
+  margin: 0;
 }
 
 .flex-container-column {
@@ -219,24 +229,6 @@ textarea {
   max-width: 100%;
 }
 
-html,
-
-header { margin-bottom: 4rem; }
-main   { margin: 0 auto; }
-footer { margin-top: 4rem; }
-body {
-  color: var(--Silver-Accent);
-  font-family: "Courier New";
-  line-height: 1.45;
-  padding: .48rem;
-  background-color: var(--Metallic-Black);
-  min-height: 100%;
-  min-width: 70rem;
-}
-
-html {
-  font-size: 18px;
-}
 
 
 blockquote {

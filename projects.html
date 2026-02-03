@@ -12,7 +12,7 @@ layout: default
         </div>
         {% for project in project_type[1].items %}
         <div class="project-card">
-            <a href="{{ project.link }}">
+            <a href="{{project[1].link | relative_url}}">
             <h4>{{ project[1].name }}</h4>
             </a>
             <p>{{ project[1].description }}</p>
