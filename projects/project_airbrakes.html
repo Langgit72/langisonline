@@ -6,7 +6,6 @@ title: Project - Airbrakes
 <div class = "flex-container-column">
 <h2>Airbrake Design and Analysis</h2>
 
-<h4>Interactive Model</h4>
 <model-viewer
   class = "model-viewer"
   alt="Fully Assembled Airbrake System"
@@ -19,13 +18,56 @@ title: Project - Airbrakes
 <h6>Interactive Model</h6>
 
 <p>
-  During the 2025–2026
-  <a href="https://www.soundingrocket.org/what-is-irec.html" target="_blank" rel="noopener">
-    IREC
-  </a>
-  Competition, I worked on the system analysis and mechanical design for the
-  <a href="https://cornellrocketryteam.com" target="_blank" rel="noopener">
-    Cornell Rocketry Team
-  </a>.
+  During the 2025–2026 
+  <a href="https://www.soundingrocket.org/what-is-irec.html" target="_blank" rel="noopener" >IREC</a>
+     design season I worked on the Airbrakes system for our team.
 </p>
+
+<p>
+  Flight scoring is based on the demonstrated altitude achieved relative to target apogee and successful recovery. The accuracy of the launch vehicle's actual apogee is worth 70% of the point value of flight performance, and so trajectory planning is important. One strategy in reducing the error between target apogee and flown apogee is the implementation of an Airbrake system. 
+</p>
+
+<p>
+  In order to evaluate different designs for our trade study, we need to characterize the environment we expect deploy the Airbrakes. The important conditions to consider are the wind speed, altitude, and air density. Using this information along with a dynamic model of our rocket we can start approximating the vehicle dynamics during the coasting phase. Finally we need to determine a maximum change in altitude as a system parameter. With Airbrakes the best approach is to design a rocket that overshoots the target apogee. The altitude change required by our system can be approximated by taking the overshoot value, adding uncertainty and multiplying by a factor of safety. Then the model can be used to predict how Airbrakes of different cross sectional area and drag coefficients operate. For preliminary analysis we will not take into account active control, but rather model Airbrakes as a system that transitions from the neutral state to an active state where it is fully deployed and does not actuate further during flight.
+</p>
+<ul>
+    <li>Pressure is approximated using the barometric formula for linearly decreasing temperature</li>
+    <li>Density is derived by treating air as an ideal gas with specific gas constant ~287 J/kgK</li>
+</ul>
+
+<div class="katex-equation" style="margin-right: 20px; text-align: left;">
+  $$\rho(x) = \frac{P_0{(1 + \frac{Lh}{T_0}})^{\frac{-gM}{RL}}}{R_{air}(T_0-Lh)}$$
+  <p>Air Density as a function of altitude</p>
+</div>
+
+<p> I created a basic 1-D dynamic model in MATLAB to simulate the behavior of the Airbrakes system. The model accounts for the forces acting on the rocket during the coasting phase, including gravity, and aerodynamic drag. The Airbrakes are modeled as a system that can be deployed to increase drag and reduce altitude overshoot. The drag force is split into the nominal drag of the launch vehicle \(F_{d,LV}\) and the additional drag from the Airbrakes \(F_{d,brake}\).</p>
+<div class="katex-equation" style="margin-right: 20px; text-align: left;">
+  $$\ddot{x} = -F_{d,LV} - F_{d,brake} - mg$$
+  where
+  $$F_{d,LV} = \frac{1}{2}\rho(x)C_{d,LV}A_{LV}\dot{x}^2$$
+  $$F_{d,brake} = \frac{1}{2}\rho(x)C_{d,brake}A_{brake}\dot{x}^2$$
+  <p>Equation of Motion for Airbrakes System</p>
+</div>
+
+
+<p>Using the above formulation the following system performance were produced for an airbrake system with a \(C_d=1.3\) and \(A_{brake}=0.202 ft^2\)</p>
+
+<img src="{{ 'assets\Images\Projects\Airbrakes\MatLabPlots.png' | relative_url }}" alt="Pressure vs Altitude" width = "700px">
+
+<p>
+  The maximum loading from the analysis is around \(720 N\) which is well within the structural limits of my integration structure design. The system is able to reduce the altitude overshoot by around 1000 ft which is a significant improvement in performance. Future work on this project will include the implementation of an active control system for the Airbrakes and further optimization of the design parameters.
+</p>
+
+<img src="{{ 'assets\Images\Projects\Airbrakes\ansys_force.png' | relative_url }}" alt="Airbrakes Deployment" width = "700px">
+
+<img src="{{ 'assets\Images\Projects\Airbrakes\ansys_solution.png' | relative_url }}" alt="Airbrakes Deployment" width = "700px">
+
+<p>
+  Detailed Design Reviews (DDRs) were held throughout the design process to ensure that the Airbrakes system met all requirements and specifications. During these reviews, I presented the design concepts, analysis results, and testing plans to my team. The feedback received during these reviews was invaluable in refining the design and ensuring the system could be successfully integrated into the overall launch vehicle.
+</p>
+
+<embed src="{{ 'assets\pdfs\Projects\Airbrake Integration and Analysis PDR.pdf' | relative_url }}" type="application/pdf" width="800px" height="500px" title="PDR">
+<embed src="{{ 'assets\pdfs\Projects\Airbrakes\Airbrake_Integration_FA2025_IDR.pdf' | relative_url }}" type="application/pdf" width="800px" height="500px" title="IDR">
+<embed src="{{ 'assets\pdfs\Projects\Airbrakes\Airbrake_Integration_FA2025_FDR.pdf' | relative_url }}" type="application/pdf" width="800px" height="500px" title="FDR">
+
 </div>

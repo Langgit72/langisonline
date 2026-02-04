@@ -8,6 +8,16 @@
     <title>{{site.title}} | {{page.title}}</title>
     <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
     
+    <!--KaTeX-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
     <!--Model Viewer-->>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
@@ -25,7 +35,8 @@
           <img class = 'favicon-header' src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon">
           <!--<p>totem</p>-->
         </div>
-        <div class ="flex-container-row_nowrap">
+        <h2  style="color: var(--Crimson-Red);">{{ site.title }}</h2>
+        <div class ="flex-container-row-no-wrap-end">
           <div class ="header-card">
             <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
           </div>
@@ -53,7 +64,7 @@
             <a href="{{"/contact" | relative_url }}">Contact</a>
           </p>
         </div>
-        <div class = "flex-container-row_nowrap">
+        <div class = "flex-container-row-no-wrap-end">
             <a href="{{site.github}}" target="_blank">
               <img class = "icon-link" src = "{{'assets/Images/GitHub/GitHub_Invertocat_White_Clearspace.png' | relative_url}}" alt = "My Github">
             </a>
