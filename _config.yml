@@ -27,8 +27,14 @@ crt: https://cornellrocketryteam.com/
 description: Engineering Portfolio and Blog of Langston C. Johnson
   # This description will show up in your feed, and in the meta description tag
   # of your site's pages. It will also show up in search results.
-baseurl: "/langisblog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+#custom domain config settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://langis.online" # the base hostname & protocol for your site, e.g. http://example.com
+
+#baseurl: "/langisblog" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 permalink: /:categories/:year/:month/:day/:title:output_ext
 #twitter_username: jekyllrb
 github_username:  Langgit72
