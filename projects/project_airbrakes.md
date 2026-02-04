@@ -5,6 +5,11 @@ title: Project- Airbrakes
 
 ## Project Description
 
+#### System Overview
+##### Images of Design
+
+<model-viewer alt="Fully Assembled Airbrake System" src="shared-assets/models/NeilArmstrong.glb" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
 During the 2025-2026 [IREC](https://www.soundingrocket.org/what-is-irec.html) Competition I worked on the system analysis and mechanical design for the [Cornell Rocketry Team's]("{{"site:crt"}}")
 
 Flight scoring is based on the demonstrated altitude achieved relative to target apogee and successful recovery. 
