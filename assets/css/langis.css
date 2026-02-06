@@ -174,7 +174,8 @@ small,
 }
 
 .model-viewer{
-  width: 100%;
+  width: 60%;
+  height: 50%;
   height: 700px;
   border: 4px solid var(--Crimson-Red);
   border-radius: 1rem;
