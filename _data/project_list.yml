@@ -1,0 +1,43 @@
+types:
+  mechanical:
+      name: "Mechanical and Aerospace Engineering"
+      description: "Solidworks. Ansys. MATLAB. Systems Engineering."
+      projects:
+        Airbrakes:
+          name: "Cornell Rocketry - Airbrakes [Ongoing]"
+          link: '/projects/project_airbrakes'
+          description: 'Apogee Targeting System for High Powered Rocket'
+          image: 'assets/favicon/android-chrome-192x192.png'
+
+select_projects: #appear on home page
+  - Airbrakes
+
+
+#        description: "System Modeling, Requirements, and Mechanical Design of Airbrakes for Apogee Control."
+#        
+#        
+
+#  mechanical:
+#      name: "Mechanical and Aerospace Engineering"
+#     
+#      items:
+#      - name: "Cornell Rocketry - Airbrakes [Ongoing]"
+#        description: "System Modeling, Requirements, and Mechanical Design of Airbrakes for Apogee Control."
+#        link: '/projects/project_airbrakes'
+#        image: 'assets/favicon/android-chrome-192x192.png'
+#      project2:
+#        name: "Cornell Rocketry - Boat Tail and PCB Mounts"
+#        description: "System Integration and Testing of a 1U CubeSat that deployed the worlds first free-flying light sail"
+#        link: "{{'_projects/PCB Mounts.html'|relative_url}}"
+#  software:
+#    name: "Software Engineering"
+#    description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
+#    items:
+#      project1:
+#          name: "High Altitude Balloon Flight Software"
+#          description: "Embedded Software for a High Altitude Balloon Payload"
+#          link: "{{'_projects/project_hab_software.html'|relative_url}}"
+#      project2:
+#          name: "Free Drift"
+#          description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
+#          link: "{{'_projects/project_free_drift.html'|relative_url}}"

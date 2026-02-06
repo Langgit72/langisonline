@@ -5,6 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>{{site.title}} | {{page.title}}</title>
     <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
     
@@ -30,18 +31,15 @@
 
   <body>
     <header>
-      <div class ="flex-container-space-between">
-        <div>
+      <div class ="flex-container-space-evenly">
+        <div class = "flex-container-column">
           <img class = 'favicon-header' src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon">
-          <!--<p>totem</p>-->
+          <p style="text-align: center; border: 1rem; color: var(--Crimson-Red)">seraph.</p>
         </div>
         <h2  style="color: var(--Crimson-Red);">{{ site.title }}</h2>
-        <div class ="flex-container-row-no-wrap-end">
+        <div class ="flex-container-row-no-wrap">
           <div class ="header-card">
             <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
-          </div>
-          <div class ="header-card">
-            <a href="{{"assets/pdfs/Langston_Johnson_Resume_2026.pdf" | relative_url}}" download="Langston_Johnson_Resume_2026" class ="site-nav"><h4>Download My Resume</h4></a>
           </div>
           <div class ="header-card">
             <a href="{{"/about" | relative_url}}" class ="site-nav"><h4>About</h4></a>
@@ -49,10 +47,17 @@
           <div class ="header-card">
             <a href="{{"/projects" | relative_url}}" class ="site-nav"><h4>Projects</h4></a>
           </div>
+               <div class ="header-card">
+            <a href="{{"/gallery" | relative_url}}" class ="site-nav"><h4>Gallery</h4></a>
+          </div>
+                  <div class ="header-card">
+            <a href="{{"assets/pdfs/Langston_Johnson_Resume_2026.pdf" | relative_url}}" download="Langston_Johnson_Resume_2026" class ="site-nav"><h4>Resume</h4></a>
+          </div>
         </div>
       </div>
     </header>
     <main>
+      <h1 style = "text-align: center;">{{page.title}}.</h1>
       {{ content }}
     </main>
     <footer>
