@@ -30,14 +30,14 @@
   </head>
 
   <body>
-    <header>
+    <header id = "site-header">
       <div class ="flex-container-space-evenly">
         <div class = "flex-container-column">
           <img class = 'favicon-header' src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon">
           <p style="text-align: center; border: 1rem; color: var(--Crimson-Red)">seraph.</p>
         </div>
-        <h2  style="color: var(--Crimson-Red);">{{ site.title }}</h2>
-        <div class ="flex-container-row-no-wrap">
+        <h2  style="color: var(--Crimson-Red); text-align: center;">{{ site.title }}</h2>
+        <div class ="flex-container-row-wrap">
           <div class ="header-card">
             <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
           </div>

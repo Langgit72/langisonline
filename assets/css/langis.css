@@ -124,11 +124,11 @@ small,
 }
 
 .header-card{
-  text-align: center;
+  text-align: left;
   border-radius: .5rem;
   background-color: var(--Metallic-Black);
-  margin:0;
-  padding-bottom: 0.5rem;
+  padding-right:1rem;
+  padding-left:1rem;
 }
 
 .header-card a{
