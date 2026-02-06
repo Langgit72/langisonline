@@ -1,0 +1,176 @@
+---
+layout: default
+title: Project - InstrumatedTorqueWrench
+---
+
+<div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+
+  <h2 style="text-align:center;">Assignment Description</h2>
+
+  </p style="text-align:center;">
+    I was assigned to design a non-ratcheting, 3/8 inch drive instrumented torque wrench
+    rated for 600 in-lbf.
+  </p>
+
+  </p style="text-align:center;">
+    The torque will be transduced by strain gauges on the sides of the torque wrench.
+    The design goal is to maximize the voltage output of the wrench (mV/V) at the rated torque.
+    The design is required to attain at least 1.0 mV/V output at the rated torque of
+    600 in-lbf. Higher output will lead to more sensitivity and improved signal-to-noise ratio.
+  </p>
+
+  </p style="text-align:center;">
+    The constraints are that the wrench must not fail due to static loading, crack growth, or fatigue.
+  </p>
+
+  </p style="text-align:center;">
+    The wrench must sustain a fully reversed torque of
+    <strong>T = ±600 in-lbf</strong> for
+    <strong>10<sup>6</sup> cycles</strong>.
+  </p>
+
+  </p style="text-align:center;">
+    Design will include selecting an appropriate material and dimensions to meet or exceed the
+    following requirements:
+  </p>
+
+  <ul>
+    <li>At least 1.0 mV/V output at 600 in-lbf</li>
+    <li>Safety factor X<sub>o</sub> = 4 for yield or brittle failure</li>
+    <li>Safety factor X<sub>K</sub> = 2 for crack growth from a 0.04 in crack</li>
+    <li>Fatigue safety factor X<sub>S</sub> = 1.5</li>
+    <li>Material must be steel, aluminum, or titanium alloy</li>
+  </ul>
+
+  <h2 style="text-align:center;">Basic Design and Hand Calculations</h2>
+
+  <h3 style="text-align:center;">Material Selection</h3>
+
+  </p style="text-align:center;">
+    The wrench will be one solid body to avoid bonding weaknesses. Therefore, a single
+    material was selected for the core structure.
+  </p>
+
+  </p style="text-align:center;">
+    The material must not be brittle, as a large elastic regime improves strain-gauge sensitivity.
+    High fracture toughness is also critical due to reduced cross-section at the gauge location.
+  </p>
+
+  </p style="text-align:center;">
+    Aluminum alloys have far lower strength and toughness than steel and titanium.
+    While M-series tooling steels have high stiffness, they generally exhibit reduced
+    fracture toughness.
+  </p>
+
+  </p style="text-align:center;">
+    High Alloy Steel AF1410 was selected due to its high yield strength,
+    fracture toughness, and Young’s modulus.
+  </p>
+
+  <img class="inline-image-l"
+       src="{{ '/assets/Images/InstrumatedTorqueWrench/PropertyGraph.png' | relative_url }}"
+       alt="Yield Strength vs Fracture Toughness">
+
+  <h4>High Alloy Steel AF1410</h4>
+  <ul>
+    <li>Young’s Modulus: <em>29.4 × 10<sup>6</sup> psi</em></li>
+    <li>Poisson’s Ratio: <em>0.3</em></li>
+    <li>Yield Strength: <em>215 ksi</em></li>
+    <li>Fatigue Strength: <em>94.3 ksi</em></li>
+    <li>Fracture Toughness: <em>137 ksi√in</em></li>
+  </ul>
+
+  </p style="text-align:center;">
+    The wrench was designed for a maximum torque of 1200 in-lbf (100 ft-lbf).
+    A full Wheatstone bridge strain gauge configuration was selected, providing twice
+    the sensitivity of a half-bridge.
+  </p>
+
+  <h4>Basic Dimensions</h4>
+  <ul>
+    <li>L = 16 in</li>
+    <li>h = 0.65 in</li>
+    <li>b = 0.45 in</li>
+    <li>c = 1.0 in</li>
+  </ul>
+
+  <h4>Analytical Results</h4>
+  <ul>
+    <li>Maximum Normal Stress: 37.87 ksi</li>
+    <li>Deflection: 0.338 in</li>
+    <li>Strength Safety Factor: 18.93</li>
+    <li>Crack Growth Safety Factor: 18.22</li>
+    <li>Fatigue Safety Factor: 4.98</li>
+    <li>Strain at Gauge: 603.8 µε</li>
+    <li>Output at 600 in-lbf: 1.2076 mV/V</li>
+  </ul>
+
+  <h3 style="text-align:center;">CAD Model</h3>
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/FullCAD.png' | relative_url }}"
+       alt="Full CAD Model">
+
+  </p style="text-align:center;">
+    The CAD model follows the analytical dimensions. The handle width is reduced
+    to 85% at the strain gauge section, with fillets applied to reduce stress concentrations.
+  </p>
+
+  <img class="inline-image-1"
+       src="{{ '/assets/Images/InstrumatedTorqueWrench/Drawing.png' | relative_url }}"
+       alt="Wrench Dimensions">
+
+  <h3 style="text-align:center;">FEM Analysis</h3>
+
+  <h4>Boundary Conditions</h4>
+
+  </p style="text-align:center;">
+    Zero displacement was applied at the drive, with a 37.5 lbf load applied at the grip,
+    corresponding to 600 in-lbf torque.
+  </p>
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/BoundaryConditions.png' | relative_url }}">
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/ForceCondition.png' | relative_url }}">
+
+  <h4>FEM Solution</h4>
+
+  </p style="text-align:center;">
+    The reduced thickness at the strain gauge increased local strain by ~66%.
+    Peak strain reached 1016 µε.
+  </p>
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/MaxStrain_Close.png' | relative_url }}">
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/MaxStrain_Close_Probe.png' | relative_url }}">
+
+  </p style="text-align:center;">
+    Stress concentrations at the drive reached 95.5 ksi, exceeding analytical predictions.
+  </p>
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/MaxStress_Close.png' | relative_url }}">
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/Deflection.png' | relative_url }}">
+
+  <h4>Post-Refinement Results</h4>
+
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/Refinement.png' | relative_url }}">
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/MaxStrain_Close_Refinement.png' | relative_url }}">
+  <img src="{{ '/assets/Images/InstrumatedTorqueWrench/MaxStress_Close_Refinement.png' | relative_url }}">
+
+  <h3 style="text-align:center;">Strain Gauge</h3>
+
+  <ul>
+    <li>Type: <em>SgT-2/1000-FB41</em></li>
+    <li>Configuration: Full Wheatstone Bridge</li>
+    <li>Manufacturer: Omega</li>
+    <li>Supplier: DigiKey</li>
+    <li>Carrier Size: 0.315 × 0.256 in</li>
+    <li>Grid Size: 0.071 × 0.094 in</li>
+    <li>VRMS: 12</li>
+    <li>Temperature Compensation: Steel</li>
+  </ul>
+
+  <img class="inline-image-1"
+       src="{{ '/assets/Images/InstrumatedTorqueWrench/StrainGauge.png' | relative_url }}">
+  <img class="inline-image-1"
+       src="{{ '/assets/Images/InstrumatedTorqueWrench/StrainGaugeCAD.png' | relative_url }}">
+
+</div>

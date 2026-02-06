@@ -1,0 +1,54 @@
+---
+layout: default
+title: Project - Board Mounts
+---
+<div class = "flex-container-column">
+    <h2>Board Mounts</h2>
+
+    <div class = "flex-container-column">
+        <model-viewer
+            class = "model-viewer"
+            alt="Fully Assembled Airbrake System"
+            src="{{ 'assets/3DModels/Airbrakes/PiHat_Clip.glb' | relative_url }}"
+            poster="{{ 'assets/favicon/android-chrome-512x512.png' | relative_url }}"
+            intensity="0"
+            camera-controls
+            touch-action="pan-y">
+        </model-viewer>
+
+        <model-viewer
+        class = "model-viewer"
+        alt="Fully Assembled Airbrake System"
+        src="{{ 'assets\3DModels\Airbrakes\Power_Holder.glb' | relative_url }}"
+        poster="{{ 'assets/favicon/android-chrome-512x512.png' | relative_url }}"
+        intensity="0"
+        camera-controls
+        touch-action="pan-y">
+        </model-viewer>
+
+    </div>
+
+    <p>
+    The purpose of this system is to safely house all boards used within the Fill Station.
+    This includes relay boards, ball valve board, a power board, Sense Boards, and a PI
+    Hat.
+    </p>
+    <p>
+    The first design choice was whether or not to design a PCB Rack, or slotting system,
+similar to the system used in the avionics bay, or to instead transition to a surface
+mounting approach. The Rack approach was useful due to its compact storage
+capability. The large size of the SKB Box (26.5" x 26.56" x 11.65") used as the base for
+the fill station made compactness a less important factor in the design space. Many
+boards had D-Sub Connectors that would not be accessible if not mounted with the
+topside of the board exposed. For these reasons, surface mounting was selected.
+    </p>
+    <p>
+ Initially, the method of mounting the boards was through bolts and washers. How-
+ever, drilling holes into the box increased the risk that particles from the environment
+could reach the interior of the box. The final mount features tabs that would allow
+for very high bond (VHB) mounting tape to be used
+    </p>
+
+    <embed src="{{'assets\pdfs\Projects\FillStation\Fill Station FDR.pdf' | relative_url }}" type="application/pdf" width="70%" height="500px" title="FDR">
+
+</div>

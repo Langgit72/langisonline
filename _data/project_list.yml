@@ -8,9 +8,49 @@ types:
           link: '/projects/project_airbrakes'
           description: 'Apogee Targeting System for High Powered Rocket'
           image: 'assets/favicon/android-chrome-192x192.png'
+        Fill_Station:
+            name: "Cornell Rocketry - Fill Station Box"
+            link: '/projects/project_board_mounts'
+            description: 'Fill Station Houses and protects all electronics used in fill the launch vehicle with nitrous oxide. '
+            image: 'assets/favicon/android-chrome-192x192.png'
+        Alpha_I&T:
+            name: "Cornell SSDS - Integration and Testing"
+            link: '/projects/paper_I&T'
+            description: 'Integration and Testing of Worlds first Free-Flying light sail'
+            image: 'assets/favicon/android-chrome-192x192.png'
+  software:
+    name: "Software Engineering"
+    description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
+    projects:
+        BalloonSoftware:
+            name: "Cornell SSDS - High Altitude Balloon Flight Software"
+            description: "Embedded Software for a High Altitude Balloon Payload"
+            link: "{{'_projects/project_hab_software.html'|relative_url}}"
+
+        FreeDrift:
+            name: "Free Drift"
+            description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
+            link: "{{'_projects/project_free_drift.html'|relative_url}}"
+            image: 'assets/favicon/android-chrome-192x192.png'
+
+  coursework:
+      name: "Cornell Engineering Coursework"
+      description: "Engineering Materials. Lasers and Photonics"
+      projects:
+        TorqueRod:
+            name: "MAE 3270 - Instrumented Torque Rod"
+            link: '/projects/TorqueRod'
+            description: 'Engineering Materials Design Project. 600 in-lbf rated Instrumated Torque Wrenchss'
+            image: 'assets/favicon/android-chrome-192x192.png'
+        N2_Laser:
+            name: "ENGRI 1101- Instrumented Torque Rod"
+            link: '/projects/TorqueRod'
+            description: 'Engineering Materials Design Project. 600 in-lbf rated Instrumated Torque Wrenchss'
+            image: 'assets/favicon/android-chrome-192x192.png'
 
 select_projects: #appear on home page
   - Airbrakes
+  - Alpha_I&T
 
 
 #        description: "System Modeling, Requirements, and Mechanical Design of Airbrakes for Apogee Control."
