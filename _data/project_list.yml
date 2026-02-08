@@ -18,25 +18,25 @@ types:
             link: '/projects/paper_I&T'
             description: 'Integration and Testing of Worlds first Free-Flying light sail'
             image: 'assets/favicon/android-chrome-192x192.png'
-  software:
-    name: "Software Engineering"
-    description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
-    projects:
-        BalloonSoftware:
-            name: "Cornell SSDS - High Altitude Balloon Flight Software"
-            description: "Embedded Software for a High Altitude Balloon Payload"
-            link: "{{'_projects/project_hab_software.html'|relative_url}}"
-            image: 'assets/favicon/android-chrome-192x192.png'
-        FreeDrift:
-            name: "Free Drift"
-            description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
-            link: "{{'_projects/project_free_drift.html'|relative_url}}"
-            image: 'assets/favicon/android-chrome-192x192.png'
-        langisonline:
-            name: "langis.online"
-            description: "Online Engineering Portfolio based in Jekyll and hosted on GitHub pages"
-            link: "{{'_projects/project_free_drift.html'|relative_url}}"
-            image: 'assets/favicon/android-chrome-192x192.png'
+ # software:
+ #   name: "Software Engineering"
+ #   description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
+ #   projects:
+ #       BalloonSoftware:
+ #           name: "Cornell SSDS - High Altitude Balloon Flight Software"
+ #           description: "Embedded Software for a High Altitude Balloon Payload"
+ #           link: "{{'_projects/project_hab_software.html'|relative_url}}"
+ #           image: 'assets/favicon/android-chrome-192x192.png'
+ #       FreeDrift:
+ #           name: "Free Drift"
+ #           description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
+ #           link: "{{'_projects/project_free_drift.html'|relative_url}}"
+ #           image: 'assets/favicon/android-chrome-192x192.png'
+ #       langisonline:
+ #           name: "langis.online"
+ #           description: "Online Engineering Portfolio based in Jekyll and hosted on GitHub pages"
+ #           link: "{{'_projects/project_free_drift.html'|relative_url}}"
+ #3           image: 'assets/favicon/android-chrome-192x192.png'
 
   coursework:
       name: "Cornell Engineering Coursework"
@@ -47,11 +47,11 @@ types:
             link: '/projects/TorqueRod'
             description: 'Engineering Materials Design Project. 600 in-lbf rated Instrumated Torque Wrenchss'
             image: 'assets/favicon/android-chrome-192x192.png'
-        N2_Laser:
-            name: "AEP 1101 - Pulsed Nitrogen Laser"
-            link: '/projects/TorqueRod'
-            description: 'Pulse Generation Circuit. Thyatron. Optics Instrumentation'
-            image: 'assets/favicon/android-chrome-192x192.png'
+#        N2_Laser:
+#            name: "AEP 1101 - Pulsed Nitrogen Laser"
+#            link: '/projects/TorqueRod'
+#            description: 'Pulse Generation Circuit. Thyatron. Optics Instrumentation'
+#image: 'assets/favicon/android-chrome-192x192.png'
 
 select_projects: #appear on home page
   - Airbrakes
