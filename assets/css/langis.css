@@ -1,4 +1,5 @@
-
+---
+---
 /*Personal CSS Style Sheet for my website. Based off of retro.css from */
 :root{
   --Metallic-Black: #1C1C1C;
@@ -6,7 +7,18 @@
   --Steel-Blue: #0b141b;
   --Crimson-Red: #DC143C;
   --Crimson-Red-Dark: #8b0e27;
-  --Silver-Accent: #C0C0C0;
+  --Silver-Accent: #d4d4d4;
+
+  {%if site.mode == "light" %}
+    --SiteColor1: white;
+    --SiteColor2: var(--Grey);
+    --SiteColor3: black;
+  {%else%}
+    --SiteColor1: var(--Metallic-Black);
+    --SiteColor2: var(--Metallic-Blackout);
+    --SiteColor3: var(--Silver-Accent);
+  {%endif%}
+
 }
 
 pre,
@@ -35,14 +47,14 @@ html {
 header{
   margin-bottom: 4%;
   border-bottom: var(--Crimson-Red) double 10px;
-  background-color: var(--Metallic-Blackout);
+  background-color: var(--SiteColor2);
 }
 
 body {
-  color: var(--Silver-Accent);
+  color: var(--SiteColor3);
   font-family: "Courier New";
   line-height: 1.5rem;
-  background-color: var(--Metallic-Black);
+  background-color: var(--SiteColor1);
 }
 
 footer {
@@ -51,7 +63,7 @@ footer {
   padding-bottom: 1rem;
   border-top: 3px solid var(--Crimson-Red);
   text-align: center;
-  background-color: var(--Metallic-Blackout);
+  background-color: var(--SiteColor2);
 }
 
 p,
@@ -126,13 +138,13 @@ small,
 .header-card{
   text-align: left;
   border-radius: .5rem;
-  background-color: var(--Metallic-Black);
+  background-color: var(--SiteColor1);
   padding-right:1rem;
   padding-left:1rem;
 }
 
 .header-card a{
-  color: var(--Silver-Accent);
+  color: var(--SiteColor3);
 }
 .header-card a.home-nav{
   color: var(--Crimson-Red);
@@ -143,14 +155,14 @@ small,
   border-radius: .5rem;
   width: 'auto';
   width: 50%;
-  background-color: var(--Metallic-Blackout);
+  background-color: var(--SiteColor2);
 }
 .project-card a{
   color: var(--Crimson-Red-Dark);
 }
 
 .project-type-header{
-  color: var(--Silver-Accent);
+  color: var(--SiteColor3);
   font-size: 1.5rem;
   margin-bottom: .5rem;
 }
@@ -187,7 +199,7 @@ small,
 
 .katex-equation{
   text-align: left;
-  background-color: var(--Metallic-Blackout);
+  background-color: var(--SiteColor2);
   padding: .5rem;
   border: 1px double var(--Crimson-Red);
   border-radius: .5rem;

@@ -19,10 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Langston Johnson
-email: langstoncjohnson@gmail.com
+email: lcj36@cornell.edu
+phone: 202-674-8804
 linkedin: https://www.linkedin.com/in/langston-johnson/
 github: https://github.com/Langgit72/
 crt: https://cornellrocketryteam.com/
+mode: "dark"
 
 description: Engineering Portfolio and Blog of Langston C. Johnson
   # This description will show up in your feed, and in the meta description tag
