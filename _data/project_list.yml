@@ -18,6 +18,11 @@ types:
             link: '/projects/paper_I&T'
             description: 'Integration and Testing of Worlds first Free-Flying light sail'
             image: 'assets/favicon/android-chrome-192x192.png'
+        High_Altitude_Balloon:
+            name: "Cornell SSDS - High Altitude Balloon Payload"
+            link: '/projects/high_altitude_balloon'
+            description: 'Flight Avionics, Flight Software, and Ground Station for a High Altitude Balloon'
+            image: 'assets/favicon/android-chrome-192x192.png'
   software:
     name: "Software Engineering"
     description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
