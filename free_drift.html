@@ -1,13 +1,13 @@
 ---
 layout: freedrift
 title: Free Drift
+comments: true
 ---
 <div class = "flex-container-column">
   <h2><em>By Fractal Studios.</em></h2>
   <h4>Version 1.8.6 Alpha</h4>
 
   <p><em> <strong>Free Drift</strong> is a passion project of mine I've been working on for about a year. It's a 2D pixel art space exploration game built in C# using the Unity Game Engine. The game design and art is done by myself. The world building and story is done by other members of Fractal Studios, my game development team.</em></p>
-  <div class = "flex-container-column">
 
   <iframe 
       src="{{'assets/unity/v1.8.6/index.html' | relative_url}}" 
@@ -47,5 +47,30 @@ title: Free Drift
         Download</a>
     </li>
   </ul>
-
 </div>
+
+ {% if page.comments %} 
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      
+      var disqus_config = function () {
+          this.page.url =  'https://langis.online/free_drift/' // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = 'free_drift'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          this.page.title = 'Free Drift'; // Replace PAGE_TITLE with your page's title variable
+      };
+      
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = 'https://https-langis-online.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
