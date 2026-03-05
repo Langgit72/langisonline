@@ -1,0 +1,88 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>{{site.title}} | {{page.title}}</title>
+    <link rel="stylesheet" href="{{'assets/css/langis.css' | relative_url }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9C280GJWN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Y59KS3STYY');
+    </script>
+    
+    <!--KaTeX-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <!--Model Viewer-->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+  </head>
+
+  <body>
+    <header id = "site-header">
+      <div class ="flex-container-space-evenly">
+        <div class = "flex-container-column">
+          <img class = 'favicon-header' src="{{'assets/favicon/android-chrome-192x192.png' | relative_url}}" alt = "favicon">
+          <!--p style="text-align: center; border: 1rem; color: var(--Crimson-Red)">seraph.</p-->
+        </div>
+        <h2  style="color: var(--Crimson-Red); text-align: center;">{{ site.title }}</h2>
+        <div class ="flex-container-row-wrap">
+          <div class ="header-card">
+            <a href="{{"/index" | relative_url}}" class ="home-nav"><h4>Home</h4></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/pages/about" | relative_url}}" class ="site-nav"><h4>About</h4></a>
+          </div>
+          <div class ="header-card">
+            <a href="{{"/pages/projects" | relative_url}}" class ="site-nav"><h4>Projects</h4></a>
+          </div>
+               <div class ="header-card">
+            <a href="{{"/pages/gallery" | relative_url}}" class ="site-nav"><h4>Gallery</h4></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1 style = "text-align: center;">{{page.title}}.</h1>
+      {{ content }}
+    </main>
+    <footer>
+      <div class ="flex-container-space-between">
+        <div>
+          <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+          <p>
+            <a href="{{"/pages/about" | relative_url }}">About</a> |
+            <a href="{{"/pages/contact" | relative_url }}">Contact</a>
+          </p>
+        </div>
+        <div class = "flex-container-row-no-wrap-end">
+            <a href="{{site.github}}" target="_blank">
+              <img class = "icon-link" src = "{{'assets/Images/GitHub/GitHub_Invertocat_White_Clearspace.png' | relative_url}}" alt = "My Github">
+            </a>
+            <a href="{{site.linkedin}}" target="_blank">
+              <img class = "icon-link" src = "{{'assets/Images/LinkedIn/InBug-White.png' | relative_url}}" alt = "My LinkedIn">
+            </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

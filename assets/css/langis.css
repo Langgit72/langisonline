@@ -154,7 +154,7 @@ small,
   padding: .75rem 1rem;
   border-radius: .5rem;
   width: 'auto';
-  width: 50%;
+  width: 80%;
   background-color: var(--SiteColor2);
 }
 .project-card a{
@@ -185,6 +185,26 @@ small,
     margin-right: 10px;
 }
 
+.gallery-picture {
+    /* Sizing and Responsiveness */
+
+    min-width: 400px;
+    max-width: 50%; 
+    height: auto;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    /* Appearance */
+    border: 3px solid var(--Crimson-Red);
+    border-radius: 5%; /* Rounded corners */
+    padding: 10px;
+
+    /* Centering */
+    display: block;
+    margin-right: 10px;
+}
+
 .model-viewer{
   width: 800px;
   height: 50%;
@@ -195,6 +215,11 @@ small,
 .model-viewer::part(default-progress-bar) {
   background-color: var(--Crimson-Red);   /* Change the color */
   height: 10px;                     /* optional: rounded edges */
+}
+
+.gameframe {
+  border: 5px solid var(--Crimson-Red); /* Change 'red' to any color (e.g., #4593c6, green, blue) */
+  border-radius: 1rem;
 }
 
 .katex-equation{

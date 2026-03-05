@@ -18,20 +18,20 @@ types:
             link: '/projects/paper_I&T'
             description: 'Integration and Testing of Worlds first Free-Flying light sail'
             image: 'assets/favicon/android-chrome-192x192.png'
- # software:
- #   name: "Software Engineering"
- #   description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
- #   projects:
+  software:
+    name: "Software Engineering"
+    description: "Git. Embedded Systems. C#. Python. JavaScript. HTML/CSS. Unity Game Engine"
+    projects:
  #       BalloonSoftware:
  #           name: "Cornell SSDS - High Altitude Balloon Flight Software"
  #           description: "Embedded Software for a High Altitude Balloon Payload"
  #           link: "{{'_projects/project_hab_software.html'|relative_url}}"
  #           image: 'assets/favicon/android-chrome-192x192.png'
- #       FreeDrift:
- #           name: "Free Drift"
- #           description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
- #           link: "{{'_projects/project_free_drift.html'|relative_url}}"
- #           image: 'assets/favicon/android-chrome-192x192.png'
+        FreeDrift:
+            name: "Free Drift"
+            description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
+            link: '/projects/free_drift'
+            image: 'assets/favicon/android-chrome-192x192.png'
  #       langisonline:
  #           name: "langis.online"
  #           description: "Online Engineering Portfolio based in Jekyll and hosted on GitHub pages"
@@ -55,7 +55,7 @@ types:
 
 select_projects: #appear on home page
   - Airbrakes
-  - Alpha_I&T
+  - FreeDrift
 
 
 #        description: "System Modeling, Requirements, and Mechanical Design of Airbrakes for Apogee Control."

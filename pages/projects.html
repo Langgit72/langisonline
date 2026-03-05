@@ -1,0 +1,27 @@
+---
+layout: default
+title: Projects
+---
+
+<div class = "flex-container-column">
+    {% for type in site.data.project_list.types%}
+       <div>
+            <h2> {{type[1].name}} </h2>
+            <h4> {{type[1].description}} </h4>
+            <hr>
+        </div>
+        {% for project in type[1].projects %}
+        <div class="project-card">
+            <div class = "flex-container-row-no-wrap">
+                <div>
+                    <a href="{{project[1].link | relative_url}}">
+                    <h4>{{ project[1].name }}</h4>
+                    </a>
+                    <p>{{ project[1].description }}</p>
+                </div>
+                <img src="{{ project[1].image | relative_url }}" alt="{{project[1].name}} image">
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+</div>
