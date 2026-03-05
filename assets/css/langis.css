@@ -154,7 +154,8 @@ small,
   padding: .75rem 1rem;
   border-radius: .5rem;
   width: 'auto';
-  width: 80%;
+  min-width: 400px;
+  max-width:600px;
   background-color: var(--SiteColor2);
 }
 .project-card a{

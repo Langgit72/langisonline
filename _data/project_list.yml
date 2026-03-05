@@ -30,7 +30,7 @@ types:
         FreeDrift:
             name: "Free Drift"
             description: "Pixel Art Space Exploration Written in C#. Developed in the Unity Game Engine"
-            link: '/projects/free_drift'
+            link: '/free_drift'
             image: 'assets/favicon/android-chrome-192x192.png'
  #       langisonline:
  #           name: "langis.online"
