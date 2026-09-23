@@ -2,23 +2,14 @@
 layout: default
 title: Contact
 ---
-<div class = "flex-container-row-wrap">
-    <div class = "flex-container-column">
-        <!--form action="https://formspree.io/f/{your-id}" method="POST">
-            <label for="first">First Name:</label>
-            <input type="text" id="first" name="First Name" required>
+<div class="flex-container-row-wrap"> <div class="flex-container-column"> <h3>Get in Touch</h3> <p> I'm graduating in December 2026 and looking for full-time roles in spacecraft systems and aerospace engineering. The best way to reach me is by email. </p>
 
-            <label for="last">Last Name:</label>
-            <input type="text" id="last" name="Last Name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" size="30" required>
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form-->
-        <p><span style="color:var(--Crimson-Red)">phone:</span>(+1){{site.phone}}</p>
-        <p><span style="color:var(--Crimson-Red)">email:</span> {{site.email}}</p>
-    </div>
+    <p><span style="color:var(--Crimson-Red)">Email:</span> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p><span style="color:var(--Crimson-Red)">LinkedIn:</span> <a href="{{ site.linkedin }}" target="_blank" rel="noopener">{{ site.linkedin }}</a></p>
+    <p><span style="color:var(--Crimson-Red)">Resume:</span> <a href="{{ 'assets/pdfs/YOUR_RESUME.pdf' | relative_url }}" target="_blank" rel="noopener">Download (PDF)</a></p>
+
+    {% comment %}
+    Phone is hidden by default. To show it, delete the comment tags and use:
+    <p><span style="color:var(--Crimson-Red)">Phone:</span> <a href="tel:+1{{ site.phone }}">(+1) {{ site.phone }}</a></p>
+    {% endcomment %}
 </div>

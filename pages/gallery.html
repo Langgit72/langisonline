@@ -3,68 +3,107 @@ layout: default
 title: Gallery
 ---
 
-<div class = "flex-container-column">
-    <div class = "flex-container-column">
-        <h4> Here are some photos of me working on projects and doing things I enjoy. </h4>
+<div class="flex-container-column">
+    <p>Here are some photos of me working on projects and doing things I enjoy.</p>
 
-        <h3> * Projects * </h3>
-        <video controls autoplay muted loop class = "gallery-picture">
-            <source src="{{'assets/Images/Gallery/machining.mp4' | relative_url }}" type="video/mp4">
+    <h3>Projects</h3>
+
+    <figure class="gallery-item">
+        <video controls autoplay muted loop playsinline preload="metadata" class="gallery-picture" aria-label="Operating a programmable Trak lathe">
+            <source src="{{ 'assets/Images/Gallery/machining.mp4' | relative_url }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <i>Programmable Trak Lathe Operation</i>
+        <figcaption>Programmable Trak Lathe Operation</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/dye-laser.jpeg' | relative_url }}" alt="Dye Laser" class = "gallery-picture">
-        <i>Dye Laser Operation</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/dye-laser.jpeg' | relative_url }}" alt="Langston operating a dye laser" class="gallery-picture" loading="lazy">
+        <figcaption>Dye Laser Operation</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/composites.jpeg' | relative_url }}" alt="Composites Shift" class = "gallery-picture">
-        <i>Composites Shift!</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/composites.jpeg' | relative_url }}" alt="Composites layup work" class="gallery-picture" loading="lazy">
+        <figcaption>Composites Shift</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/clean-room.jpeg' | relative_url }}" alt="Clean Room" class = "gallery-picture">
-        <i>Clean Room Preparation</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/clean-room.jpeg' | relative_url }}" alt="Preparing to enter a clean room" class="gallery-picture" loading="lazy">
+        <figcaption>Clean Room Preparation</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/light-sail.jpeg' | relative_url }}" alt="Light Sail" class = "gallery-picture">
-        <i>Light Sail Assembly</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/light-sail.jpeg' | relative_url }}" alt="Light sail assembly" class="gallery-picture" loading="lazy">
+        <figcaption>Light Sail Assembly</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/solar-panel-testing.jpeg' | relative_url }}" alt="Solar Panel Testing" class = "gallery-picture">
-        <i>Testing on CubeSat Solar Panels</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/solar-panel-testing.jpeg' | relative_url }}" alt="Testing CubeSat solar panels" class="gallery-picture" loading="lazy">
+        <figcaption>Testing on CubeSat Solar Panels</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/soldering.jpeg' | relative_url }}" alt="Langston soldering" class = "gallery-picture">
-        <i>Working on Teensey Microcontroller</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/soldering.jpeg' | relative_url }}" alt="Langston soldering a Teensy microcontroller" class="gallery-picture" loading="lazy">
+        <figcaption>Working on a Teensy Microcontroller</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/latch-testing.jpeg' | relative_url }}" alt="Latch Testing" class = "gallery-picture">
-        <i>Release Mechanism Testing for Alpha CubeSat</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/latch-testing.jpeg' | relative_url }}" alt="Release mechanism test setup for a CubeSat" class="gallery-picture" loading="lazy">
+        <figcaption>Release Mechanism Testing for Alpha CubeSat</figcaption>
+    </figure>
 
-        <h3> * Drawings * </h3>
-        <img src="{{'assets/Images/Gallery/bearded-vulture.jpeg' | relative_url }}" alt="Bearded Vulture Drawing" class = "gallery-picture">
-        <i>Gypaetus Barbatus</i>
+    <h3>Drawings</h3>
 
-        <img src="{{'assets/Images/Gallery/cerulean-warbler.jpeg' | relative_url }}" alt="Cerulean Warbler Drawing" class = "gallery-picture">
-        <i>Setophaga Cerulea</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/bearded-vulture.jpeg' | relative_url }}" alt="Drawing of a bearded vulture" class="gallery-picture" loading="lazy">
+        <figcaption>Bearded Vulture (<i>Gypaetus barbatus</i>)</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/bald-eagle.jpeg' | relative_url }}" alt="Bald Eagle Drawing" class = "gallery-picture">
-        <i>Haliaeetus Leucocephalus</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/cerulean-warbler.jpeg' | relative_url }}" alt="Drawing of a cerulean warbler" class="gallery-picture" loading="lazy">
+        <figcaption>Cerulean Warbler (<i>Setophaga cerulea</i>)</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/macaw.jpeg' | relative_url }}" alt="Macaw Drawing" class = "gallery-picture">
-        <i>Ara Chloropterus</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/bald-eagle.jpeg' | relative_url }}" alt="Drawing of a bald eagle" class="gallery-picture" loading="lazy">
+        <figcaption>Bald Eagle (<i>Haliaeetus leucocephalus</i>)</figcaption>
+    </figure>
 
-        <h3> * Views * </h3>
-        <img src="{{'assets/Images/Gallery/LC-39A.jpeg' | relative_url }}" alt="LC-39A" class = "gallery-picture">
-        <i>LC-39A viewed from Kennedy Space Center Gantry</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/macaw.jpeg' | relative_url }}" alt="Drawing of a red-and-green macaw" class="gallery-picture" loading="lazy">
+        <figcaption>Red-and-green Macaw (<i>Ara chloropterus</i>)</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/cornell-aurora.jpeg' | relative_url }}" alt="Aurora" class = "gallery-picture">
-        <i>Ithacan Aurora</i>
+    <h3>Views</h3>
 
-        <img src="{{'assets/Images/Gallery/cascadilla-creek.jpeg' | relative_url }}" alt="Cascadilla Creek" class = "gallery-picture">
-        <i>Cascadilla Creek Hike</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/LC-39A.jpeg' | relative_url }}" alt="Launch Complex 39A seen from the Kennedy Space Center gantry" class="gallery-picture" loading="lazy">
+        <figcaption>LC-39A viewed from the Kennedy Space Center Gantry</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/harbor-island.jpeg' | relative_url }}" alt="Harbor Island" class = "gallery-picture">
-        <i>Harbor Island Sunset</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/cornell-aurora.jpeg' | relative_url }}" alt="Aurora over Ithaca" class="gallery-picture" loading="lazy">
+        <figcaption>Ithacan Aurora</figcaption>
+    </figure>
 
-        <img src="{{'assets/Images/Gallery/lake-colchuk.jpeg' | relative_url }}" alt="Lake Colchuk" class = "gallery-picture">
-        <i>Lake Colchuk Hike</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/cascadilla-creek.jpeg' | relative_url }}" alt="Cascadilla Creek gorge trail" class="gallery-picture" loading="lazy">
+        <figcaption>Cascadilla Creek Hike</figcaption>
+    </figure>
 
-        <h3> * Activities * </h3>
-        <img src="{{'assets/Images/Gallery/fencing.jpeg' | relative_url }}" alt="Langston fencing" class = "gallery-picture">
-        <i>Fencing at Johns Hopkins</i>
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/harbor-island.jpeg' | relative_url }}" alt="Sunset over Harbor Island" class="gallery-picture" loading="lazy">
+        <figcaption>Harbor Island Sunset</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/lake-colchuk.jpeg' | relative_url }}" alt="Lake Colchuk" class="gallery-picture" loading="lazy">
+        <figcaption>Lake Colchuk Hike</figcaption>
+    </figure>
+
+    <h3>Activities</h3>
+
+    <figure class="gallery-item">
+        <img src="{{ 'assets/Images/Gallery/fencing.jpeg' | relative_url }}" alt="Langston fencing" class="gallery-picture" loading="lazy">
+        <figcaption>Fencing at Johns Hopkins</figcaption>
+    </figure>
 </div>
